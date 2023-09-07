@@ -12,7 +12,7 @@ phases:
       - mv target/*.war target/myweb.war
 artifacts:
   files:
-    - target/myweb*/*
+    - target/*/*
   discard-paths: yes
 
 cache:
