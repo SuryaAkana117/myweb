@@ -7,9 +7,9 @@ files:
 hooks:
   BeforeInstall:
     - location: stop_tomcat.sh
-      runas: ec2-user
+      runas: root
   AfterInstall:
     - location: start_tomcat.sh
       timeout: 30
-      runas: ec2-user
+      runas: root
       
