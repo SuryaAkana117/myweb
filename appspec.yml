@@ -2,10 +2,14 @@ version: 0.0
 os: linux
 files:
   - source: /target/myweb.war
-    destination: /opt/tomcat8/webapps
+    destination: /opt/tomcat9/webapps
+    
 hooks:
   BeforeInstall:
     - location: stop_tomcat.sh
+      runas: root
   AfterInstall:
     - location: start_tomcat.sh
       timeout: 30
+      runas: root
+      
